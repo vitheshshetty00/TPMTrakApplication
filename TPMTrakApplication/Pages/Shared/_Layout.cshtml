@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TPMTrakApplication</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TPMTrakApplication.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="layout-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>TPM-Trak</h2>
+            </div>
+            <ul>
+                <li><a asp-page="/Index" class="nav-link">Home</a></li>
+                <li><a asp-page="/Produce" class="nav-link">Produce</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <style>
+        .layout-container {
+            display: flex;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            background-color: #1a56db;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+        }
+
+        .sidebar-header {
+            margin-bottom: 2rem;
+        }
+
+        .sidebar-header h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+        }
+
+        .sidebar li {
+            margin: 1rem 0;
+            width: 100%;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a.active,
+        .sidebar a:hover {
+            background-color: #1e40af;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+            background-color: #f9fafb;
+        }
+
+        #blazor-error-ui {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #f44336;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        #blazor-error-ui a {
+            color: white;
+            text-decoration: underline;
+            margin-left: 1rem;
+        }
+
+        #blazor-error-ui a.dismiss {
+            cursor: pointer;
+        }
+    </style>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,222 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="home-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>TPM-Trak: Smart Manufacturing Solutions</h1>
+            <p>Advanced OEE Monitoring System for Industry 4.0</p>
+            <button class="primary-button">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features-section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">📊</span>
+                <h3>Real-time Monitoring</h3>
+                <p>Track OEE, machine performance, and production metrics in real-time with intuitive dashboards.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">🔧</span>
+                <h3>Machine Integration</h3>
+                <p>Seamless connectivity with CNC machines, supporting multiple protocols and manufacturers.</p>
+            </div>
+
+            <div class="feature-card">
+                <span class="feature-icon">📈</span>
+                <h3>Advanced Analytics</h3>
+                <p>Comprehensive reports and analytics for production optimization and decision making.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="benefits-section">
+        <h2>Why Choose TPM-Trak?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-item">
+                <span class="check-icon">✓</span>
+                <div>
+                    <h3>Increased Productivity</h3>
+                    <p>Improve OEE by up to 25% through real-time monitoring and analysis</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <span class="check-icon">✓</span>
+                <div>
+                    <h3>Cost Reduction</h3>
+                    <p>Minimize downtime and optimize resource utilization</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <span class="check-icon">✓</span>
+                <div>
+                    <h3>Quality Improvement</h3>
+                    <p>Monitor and enhance production quality with detailed analytics</p>
+                </div>
+            </div>
+
+            <div class="benefit-item">
+                <span class="check-icon">✓</span>
+                <div>
+                    <h3>Industry 4.0 Ready</h3>
+                    <p>Future-proof your manufacturing with smart factory capabilities</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+        <h2>Ready to Transform Your Manufacturing?</h2>
+        <p>Join leading manufacturers in adopting TPM-Trak for smart manufacturing excellence</p>
+        <div class="cta-buttons">
+            <button class="primary-button">Request Demo</button>
+            <button class="secondary-button">Learn More</button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .home-container {
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9fafb;
+        color: #333;
+    }
+
+    .hero-section {
+        background: linear-gradient(135deg, #1a56db 0%, #1e40af 100%);
+        color: white;
+        padding: 6rem 2rem;
+        text-align: center;
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .features-section, .benefits-section, .cta-section {
+        padding: 4rem 2rem;
+        text-align: center;
+    }
+
+    .features-section h2, .benefits-section h2, .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+
+    .benefits-section {
+        background-color: #f3f4f6;
+    }
+
+    .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        text-align: left;
+    }
+
+    .benefit-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .check-icon {
+        color: #10b981;
+        font-size: 1.5rem;
+    }
+
+    .cta-section {
+        background-color: white;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .primary-button {
+        background-color: #1a56db;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .primary-button:hover {
+        background-color: #1e40af;
+    }
+
+    .secondary-button {
+        background-color: white;
+        color: #1a56db;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid #1a56db;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .secondary-button:hover {
+        background-color: #f3f4f6;
+    }
+</style>
